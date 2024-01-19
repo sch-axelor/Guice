@@ -44,8 +44,20 @@ public class TextEditorModule extends AbstractModule  {
 //		   }
 		
 	
-		      bind(SpellChecker.class)
-		         .toProvider(SpellCheckerProvider.class);
+//		      bind(SpellChecker.class)
+//		         .toProvider(SpellCheckerProvider.class);
+//		   } 
+		
+		
+		      try {
+		         bind(SpellChecker.class)
+		            .toConstructor(SpellCheckerImpl.class.getConstructor(String.class));
+		      } catch (NoSuchMethodException | SecurityException e) {
+		         System.out.println("Required constructor missing");
+		      } 
+		      bind(String.class)
+		         .annotatedWith(Names.named("JDBC"))
+		         .toInstance("jdbc:mysql://localhost:5326/emp");
 		   } 
 	}
 	
