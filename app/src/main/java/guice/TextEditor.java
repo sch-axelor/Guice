@@ -1,6 +1,7 @@
 package guice;
 
 import com.google.inject.Inject;
+import com.google.inject.name.Named;
 
 public class TextEditor {
 	private SpellChecker spellChecker;
@@ -15,10 +16,22 @@ public class TextEditor {
 //	   }
 	   
 	
-	//using annotaions
-	@Inject
-	   public TextEditor(@Winword SpellChecker spellChecker) {
-	      this.spellChecker = spellChecker;
+// 		using annotaions
+	
+// 		@Inject
+//	   public TextEditor(@Winword SpellChecker spellChecker) {
+//	      this.spellChecker = spellChecker;
+//	   }
+//
+//	   public void makeSpellCheck(){
+//	      spellChecker.checkSpelling(); 
+//	   } 
+	   
+	
+	//named binding 
+	   @Inject
+	   public TextEditor(@Named("OpenOffice") SpellChecker spellChecker) {
+	      this.spellChecker = spellChecker;      
 	   }
 
 	   public void makeSpellCheck(){
