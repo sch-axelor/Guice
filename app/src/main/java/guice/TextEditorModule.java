@@ -6,7 +6,7 @@ import com.google.inject.name.Names;
 
 public class TextEditorModule extends AbstractModule  {
 	@Override
-	   protected void configure() {}
+	   protected void configure() {
 		//simple bind
 	     // bind(SpellChecker.class).to(SpellCheckerImpl.class);
 	      
@@ -32,16 +32,21 @@ public class TextEditorModule extends AbstractModule  {
 //	   } 
 		
 		
-		@Provides
-		   public SpellChecker provideSpellChecker(){
-
-		      String dbUrl = "jdbc:mysql://localhost:5326/emp";
-		      String user = "user";
-		      int timeout = 100;
-
-		      SpellChecker SpellChecker = new SpellCheckerImpl(dbUrl, user, timeout);
-		      return SpellChecker;
-		   }
+//		@Provides
+//		   public SpellChecker provideSpellChecker(){
+//
+//		      String dbUrl = "jdbc:mysql://localhost:5326/emp";
+//		      String user = "user";
+//		      int timeout = 100;
+//
+//		      SpellChecker SpellChecker = new SpellCheckerImpl(dbUrl, user, timeout);
+//		      return SpellChecker;
+//		   }
+		
+	
+		      bind(SpellChecker.class)
+		         .toProvider(SpellCheckerProvider.class);
+		   } 
 	}
 	
 

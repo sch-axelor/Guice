@@ -4,6 +4,7 @@ import com.google.inject.Inject;
 
 public class SpellCheckerImpl implements SpellChecker{
 
+
 	   private String dbUrl;
 	   private String user;
 	   private Integer timeout;
