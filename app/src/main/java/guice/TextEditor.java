@@ -34,7 +34,7 @@ public class TextEditor {
 //	      this.spellChecker = spellChecker;      
 //	   }
 //
-//	   public void makeSpellCheck(){
+//	   public void makeSpeInjectionllCheck(){
 //	      spellChecker.checkSpelling(); 
 //	   } 
  
