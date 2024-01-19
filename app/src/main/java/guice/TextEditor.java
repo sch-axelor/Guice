@@ -29,13 +29,40 @@ public class TextEditor {
 	   
 	
 	//named binding 
-	   @Inject
-	   public TextEditor(@Named("OpenOffice") SpellChecker spellChecker) {
-	      this.spellChecker = spellChecker;      
-	   }
+//	   @Inject
+//	   public TextEditor(@Named("OpenOffice") SpellChecker spellChecker) {
+//	      this.spellChecker = spellChecker;      
+//	   }
+//
+//	   public void makeSpellCheck(){
+//	      spellChecker.checkSpelling(); 
+//	   } 
+ 
+		//Constant Bindings
+//	 private String dbUrl;
+//	   @Inject
+//	   public TextEditor(@Named("JDBC") String dbUrl) {
+//	      this.dbUrl = dbUrl;
+//	   }
+//
+//	   public void makeConnection(){
+//	      System.out.println(dbUrl);
+//	   } 
 
+
+	//@Provides Annotation
+	
+	@Inject
+	   public TextEditor( SpellChecker spellChecker) {
+	      this.spellChecker = spellChecker;
+	   }
 	   public void makeSpellCheck(){
-	      spellChecker.checkSpelling(); 
+	      spellChecker.checkSpelling();
 	   } 
 
+
+
+
 }
+
+
