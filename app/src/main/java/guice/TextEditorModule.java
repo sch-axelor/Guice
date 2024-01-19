@@ -10,8 +10,15 @@ public class TextEditorModule extends AbstractModule  {
 	      
 		
 		//linked binding
-	      bind(SpellChecker.class).to(SpellCheckerImpl.class);
-	      bind(SpellCheckerImpl.class).to(WinWordSpellCheckerImpl.class);
+	    //  bind(SpellChecker.class).to(SpellCheckerImpl.class);
+	     // bind(SpellCheckerImpl.class).to(WinWordSpellCheckerImpl.class);
+	      
+	      //annations
+	    
+	    
+	         bind(SpellChecker.class).annotatedWith(Winword.class)
+	            .to(WinWordSpellCheckerImpl.class);    
+	      } 
 	   } 
 
-}
+
