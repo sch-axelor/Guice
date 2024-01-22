@@ -38,7 +38,7 @@ public class TextEditorModule extends AbstractModule  {
 //		      String dbUrl = "jdbc:mysql://localhost:5326/emp";
 //		      String user = "user";
 //		      int timeout = 100;
-//private String dbUrl;
+//				private String dbUrl;
 //		   private String user;
 //		   private Integer timeout;
 //
