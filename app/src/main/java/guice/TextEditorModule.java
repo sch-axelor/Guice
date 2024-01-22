@@ -88,7 +88,13 @@ public class TextEditorModule extends AbstractModule  {
 //		      bind(String.class)
 //		         .annotatedWith(Names.named("JDBC"))
 //		         .toInstance("jdbc:mysql://localhost:5326/emp");
-		} 
+	//	} 
+	
+	//scopes
+		 
+		      bind(SpellChecker.class).to(SpellCheckerImpl.class);
+		   } 
+	
 	}
 	
 	

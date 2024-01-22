@@ -8,4 +8,7 @@ import com.google.inject.ImplementedBy;
 public interface SpellChecker {
 	 public void checkSpelling();
 
+	 public double getId();
+	 
+
 }

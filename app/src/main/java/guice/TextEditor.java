@@ -74,17 +74,31 @@ public class TextEditor {
 //	   } 
 
 //		ondemand injection
-	@Inject
+//	@Inject
+//	   public void setSpellChecker(SpellChecker spellChecker){
+//	   this.spellChecker = spellChecker;
+//	   }
+//	   public TextEditor() { }
+//
+//	   public void makeSpellCheck(){
+//	      spellChecker.checkSpelling();
+//	   } 
+	
+//scopes
+	
+	  @Inject
 	   public void setSpellChecker(SpellChecker spellChecker){
-	   this.spellChecker = spellChecker;
+	      this.spellChecker = spellChecker;
 	   }
 	   public TextEditor() { }
 
 	   public void makeSpellCheck(){
 	      spellChecker.checkSpelling();
 	   } 
-	
 
+	   public double getSpellCheckerId(){
+	      return spellChecker.getId();
+	   }
 }
 
 

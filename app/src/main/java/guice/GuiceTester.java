@@ -15,13 +15,27 @@ import static java.lang.annotation.ElementType.METHOD;
 
 public class GuiceTester {
 	public static void main(String[] args) {
-	      Injector injector = Guice.createInjector(new TextEditorModule());
-	      TextEditor editor = injector.getInstance(TextEditor.class);
+		//	      Injector injector = Guice.createInjector(new TextEditorModule());
+		//	      TextEditor editor = injector.getInstance(TextEditor.class);
+		//	      SpellChecker spellChecker = new SpellCheckerImpl();
+		//	      injector.injectMembers(spellChecker);
+		//	      
+		//	     
+		//	      editor.makeSpellCheck();
+		//	   } 
+	
+		
+		//scope
+		
+		 Injector injector = Guice.createInjector(new TextEditorModule());
 	      SpellChecker spellChecker = new SpellCheckerImpl();
 	      injector.injectMembers(spellChecker);
-	      
-	     
-	      editor.makeSpellCheck();
-	   } 
 
-}
+	      TextEditor editor = injector.getInstance(TextEditor.class);     
+	      System.out.println(editor.getSpellCheckerId());
+
+	      TextEditor editor1 = injector.getInstance(TextEditor.class);     
+	      System.out.println(editor1.getSpellCheckerId());
+	}
+		
+}	

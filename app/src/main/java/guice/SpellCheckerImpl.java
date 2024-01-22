@@ -1,8 +1,9 @@
 package guice;
 
 import com.google.inject.Inject;
+import com.google.inject.Singleton;
 import com.google.inject.name.Named;
-
+@Singleton
 public class SpellCheckerImpl implements SpellChecker{
 
 
@@ -28,10 +29,30 @@ public class SpellCheckerImpl implements SpellChecker{
 //	      System.out.println(dbUrl); 
 //	   }
 	
-	public SpellCheckerImpl(){}
-	   
+	
+	//  OPTIONAL INJECTION	
+//	public SpellCheckerImpl(){}
+//	   
+//	   @Override
+//	   public void checkSpelling() { 
+//	      System.out.println("Inside checkSpelling. ondemand injction" );
+//	   }
+	
+	
+	//scopes
+	
+	 double id; 
+	   public SpellCheckerImpl(){
+	      id = Math.random();    
+	   }
+
 	   @Override
 	   public void checkSpelling() { 
-	      System.out.println("Inside checkSpelling. ondemand injction" );
+	      System.out.println("Inside checkSpelling." );
+	   }
+
+	   @Override
+	   public double getId() { 
+	      return id;
 	   }
 }
