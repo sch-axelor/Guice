@@ -45,7 +45,7 @@ public class NamedAnnotationExample {
     public static class DrawingModule extends AbstractModule {
         @Override
         protected void configure() {
-            bind(String.class).annotatedWith(Names.named("Square")).toInstance("Square Label");
+            bind(String.class).annotatedWith(Names.named("Square")).toInstance("Square Laabel");
             bind(String.class).annotatedWith(Names.named("Circle")).toInstance("Circle Label");
 
             bind(Draw.class).annotatedWith(Names.named("Square")).to(DrawSquare.class);
