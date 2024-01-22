@@ -13,18 +13,25 @@ public class SpellCheckerImpl implements SpellChecker{
 	  // private String dbUrl;
 	
 	//optional injection
-	private String dbUrl = "jdbc:mysql://localhost:5326/emp";
-
-	   public SpellCheckerImpl(){}
+//	private String dbUrl = "jdbc:mysql://localhost:5326/emp";
+//
+//	   public SpellCheckerImpl(){}
+//	   
+//	   @Inject(optional=true)
+//	   public void setDbUrl(@Named("JDBC") String dbUrl){
+//	      this.dbUrl = dbUrl;
+//	   }
+//
+//	   @Override
+//	   public void checkSpelling() { 
+//	      System.out.println("Inside checkSpelling........." );
+//	      System.out.println(dbUrl); 
+//	   }
+	
+	public SpellCheckerImpl(){}
 	   
-	   @Inject(optional=true)
-	   public void setDbUrl(@Named("JDBC") String dbUrl){
-	      this.dbUrl = dbUrl;
-	   }
-
 	   @Override
 	   public void checkSpelling() { 
-	      System.out.println("Inside checkSpelling........." );
-	      System.out.println(dbUrl); 
+	      System.out.println("Inside checkSpelling. ondemand injction" );
 	   }
 }

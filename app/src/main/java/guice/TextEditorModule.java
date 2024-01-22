@@ -85,10 +85,10 @@ public class TextEditorModule extends AbstractModule  {
 		
 	//method injection
 		
-		      bind(String.class)
-		         .annotatedWith(Names.named("JDBC"))
-		         .toInstance("jdbc:mysql://localhost:5326/emp");
-		   } 
+//		      bind(String.class)
+//		         .annotatedWith(Names.named("JDBC"))
+//		         .toInstance("jdbc:mysql://localhost:5326/emp");
+		} 
 	}
 	
 	

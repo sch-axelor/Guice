@@ -62,16 +62,28 @@ public class TextEditor {
 	
 	//method injection 
 	
+	
+	
+	//optional  injection
+//	@Inject
+//	   public TextEditor( SpellChecker spellChecker) {
+//	      this.spellChecker = spellChecker;
+//	   }
+//	   public void makeSpellCheck(){
+//	      spellChecker.checkSpelling();
+//	   } 
+
+//		ondemand injection
 	@Inject
-	   public TextEditor( SpellChecker spellChecker) {
-	      this.spellChecker = spellChecker;
+	   public void setSpellChecker(SpellChecker spellChecker){
+	   this.spellChecker = spellChecker;
 	   }
+	   public TextEditor() { }
+
 	   public void makeSpellCheck(){
 	      spellChecker.checkSpelling();
 	   } 
-
-
-
+	
 
 }
 
