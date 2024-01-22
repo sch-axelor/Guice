@@ -52,6 +52,16 @@ public class TextEditor {
 
 	//@Provides Annotation
 	
+//	@Inject
+//	   public TextEditor( SpellChecker spellChecker) {
+//	      this.spellChecker = spellChecker;
+//	   }
+//	   public void makeSpellCheck(){
+//	      spellChecker.checkSpelling();
+//	   }
+	
+	//method injection 
+	
 	@Inject
 	   public TextEditor( SpellChecker spellChecker) {
 	      this.spellChecker = spellChecker;

@@ -10,7 +10,7 @@ public class SpellCheckerProvider implements Provider<SpellChecker>{
 	      String user = "user";
 	      int timeout = 101;
 
-	      SpellChecker SpellChecker = new SpellCheckerImpl(dbUrl, user, timeout);
+	      SpellChecker SpellChecker = new SpellCheckerImpl();
 	      return SpellChecker;
 	   } 
 

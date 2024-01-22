@@ -79,11 +79,15 @@ public class TextEditorModule extends AbstractModule  {
 //		         .toInstance("jdbc:mysql://localhost:5326/emp");
 //		   } 
 		
-	//	Constructor Injection
-	
-	
-		  
-		      bind(SpellChecker.class).to(SpellCheckerImpl.class);
+	//	Constructor Injection		  
+//		      bind(SpellChecker.class).to(SpellCheckerImpl.class);
+//		   } 
+		
+	//method injection
+		
+		      bind(String.class)
+		         .annotatedWith(Names.named("JDBC"))
+		         .toInstance("jdbc:mysql://localhost:5326/emp");
 		   } 
 	}
 	
