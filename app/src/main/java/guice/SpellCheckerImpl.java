@@ -10,8 +10,10 @@ public class SpellCheckerImpl implements SpellChecker{
 //	   public void checkSpelling() {
 //	      System.out.println("Inside checkSpelling." );
 //	   } 
+	  // private String dbUrl;
+	   @Inject @Named("JDBC")
 	   private String dbUrl;
-
+	  
 	   public SpellCheckerImpl(){}
 	   
 	   @Inject 
