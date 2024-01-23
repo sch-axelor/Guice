@@ -17,20 +17,19 @@ public class listofstudentImp implements StudentList {
 
 	@Override
 	public void listofstudent() { 
-//		Query query = entitymanager.createQuery("Select s from Student s");
-		
-//		List<Student>list=query.getResultList();
-//		for(Student s:list) {
-//			System.out.println(s.setStidId(1));
-//			System.out.println(s.setStudName("Sahil"));
-			
+		Query query = entitymanager.createQuery("Select s from Student s");
+	
+		List<Student>list=query.getResultList();
+		for(Student s:list) {
+			System.out.println("Student ID: " + s.getStidId() + ", Student Name: " + s.getStudName());
+        }
 		
 		
 		// TODO Auto-generated method stub
 		
 	}
 	
-
+	
 	
 	
 

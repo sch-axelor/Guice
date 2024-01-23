@@ -18,7 +18,7 @@ public class App {
 		em.getTransaction().begin();
 		
 		Student st = new Student();
-		st.setStidId(4);
+		st.setStidId(10);
 		st.setStudName("sahil");
 		em.persist(st);
 		em.getTransaction().commit();

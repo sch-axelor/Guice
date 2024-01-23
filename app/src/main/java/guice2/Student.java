@@ -30,22 +30,20 @@ public class Student {
 		@Id
 	    private int stidId;
 	    private String studName;
-
 		public int getStidId() {
 			return stidId;
 		}
-		public boolean setStidId(int stidId) {
+		public void setStidId(int stidId) {
 			this.stidId = stidId;
-			return false;
 		}
 		public String getStudName() {
 			return studName;
 		}
-		public boolean setStudName(String studName) {
+		public void setStudName(String studName) {
 			this.studName = studName;
-			return false;
 		}
-	   
+
+		
 	    
 	  
 	   
