@@ -5,6 +5,7 @@
 	<persistence-unit name="SAHIL2" transaction-type="RESOURCE_LOCAL">
 	
 		<class>guice2.Student</class>
+		<class>guice2.Phone</class>
 		
 	
 

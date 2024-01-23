@@ -18,9 +18,16 @@ public class App {
 		em.getTransaction().begin();
 		
 		Student st = new Student();
-		st.setStidId(10);
+		st.setStidId(15);
 		st.setStudName("sahil");
 		em.persist(st);
+		
+		
+	Phone p = new Phone();
+//		p.setId(1);
+		p.setBrandName("realme");
+        em.persist(p);
+
 		em.getTransaction().commit();
 		
 		
@@ -32,6 +39,8 @@ public class App {
 	Injector injector = Guice.createInjector(new StdModule());
 	listofstudentImp listofstudentImp =injector.getInstance(listofstudentImp.class);
 	listofstudentImp.listofstudent();
+	  PhoneListImpl phoneListImpl = injector.getInstance(PhoneListImpl.class);
+      phoneListImpl.listPhones();
 	
 	}
 }
