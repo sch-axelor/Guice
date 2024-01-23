@@ -18,15 +18,19 @@ public class App {
 		em.getTransaction().begin();
 		
 		Student st = new Student();
-		st.setStidId(15);
+		st.setStidId(16);
 		st.setStudName("sahil");
 		em.persist(st);
 		
 		
 	Phone p = new Phone();
 //		p.setId(1);
-		p.setBrandName("realme");
+		p.setBrandName("qqwwee");
         em.persist(p);
+        
+      st.setPhone(p);
+      
+       p.setStudent(st);
 
 		em.getTransaction().commit();
 		
